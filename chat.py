@@ -17,8 +17,7 @@ def add_message(new_message):
 
 def text_entered():
     add_message(f'User: {st.session_state.input}')
-    if st.session_state.history.startswith('User'):
-        st.session_state.message = st.session_state.input
+    st.session_state.message = st.session_state.input
     st.session_state.input = ''
 
 if st.session_state.pending:
