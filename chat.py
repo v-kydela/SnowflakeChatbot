@@ -41,5 +41,6 @@ st.text_area(
 
 if st.session_state.message:
     st.session_state.pending = True
-    time.sleep(0.5)
+    with st.spinner():
+        time.sleep(0.5)
     st.experimental_rerun()
