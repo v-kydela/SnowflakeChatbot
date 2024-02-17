@@ -1,11 +1,6 @@
 import streamlit as st
 import time
 
-if "pending" not in st.session_state:
-    st.session_state.history = 'Bot: Hello user'
-    st.session_state.message = None
-    st.session_state.pending = False
-
 def generate_reply(message_to_bot):
     # Bot logic goes here
     reply = f'You said, "{message_to_bot}"'
@@ -19,6 +14,11 @@ def text_entered():
     add_message(f'User: {st.session_state.input}')
     st.session_state.message = st.session_state.input
     st.session_state.input = ''
+
+if "pending" not in st.session_state:
+    st.session_state.history = 'Bot: Hello user'
+    st.session_state.message = None
+    st.session_state.pending = False
 
 if st.session_state.pending:
     reply = generate_reply(st.session_state.message)
