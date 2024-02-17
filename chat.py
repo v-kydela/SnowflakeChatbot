@@ -1,14 +1,14 @@
 import streamlit as st
 import time
 
+def add_message(new_message):
+    old_history = st.session_state.history
+    st.session_state.history = f'{new_message}\n{old_history}'
+
 def generate_reply(message_to_bot):
     # Bot logic goes here
     reply = f'You said, "{message_to_bot}"'
     return reply
-
-def add_message(new_message):
-    old_history = st.session_state.history
-    st.session_state.history = f'{new_message}\n{old_history}'
 
 def text_entered():
     add_message(f'User: {st.session_state.input}')
