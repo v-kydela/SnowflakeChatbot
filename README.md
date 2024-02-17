@@ -221,6 +221,8 @@ if st.session_state.message:
 
 Hooray, there's a short delay before the bot's reply! Now that you've made such a great bot interface, you can treat yourself to a little [`st.balloons()`](https://docs.streamlit.io/library/api-reference/status/st.balloons) to celebrate. :-)
 
+If you don't have a Snowflake account, you can try out the app in the Streamlit Community Cloud [here](https://snowchatbot.streamlit.app/).
+
 Happy coding!
 
 Kyle Delaney
