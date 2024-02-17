@@ -15,7 +15,7 @@ def text_entered():
     st.session_state.message = st.session_state.input
     st.session_state.input = ''
 
-if "pending" not in st.session_state:
+if 'pending' not in st.session_state:
     st.session_state.history = 'Bot: Hello user'
     st.session_state.message = None
     st.session_state.pending = False
