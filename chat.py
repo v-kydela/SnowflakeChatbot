@@ -43,4 +43,4 @@ if st.session_state.message:
     st.session_state.pending = True
     with st.spinner():
         time.sleep(0.5)
-    st.experimental_rerun()
+    st.rerun()
